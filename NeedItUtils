@@ -1,0 +1,18 @@
+var NeedItUtils = Class.create();
+NeedItUtils.prototype = {
+    initialize: function() {
+    },
+	isDatePast: function(strDate){
+		var rightnow = new GlideDateTime();
+		var testdate = new GlideDateTime(strDate);
+		
+		if (testdate.before(rightnow)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	},
+	
+    type: 'NeedItUtils'
+};
